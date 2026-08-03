@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Mathematics Assessment</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d3557;
+        }
+
+        .question {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .question h3 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        button {
+            display: block;
+            margin: 25px auto;
+            padding: 12px 30px;
+            background-color: #1d70b8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #155a91;
+        }
+
+        #result {
+            text-align: center;
+            background-color: #e8f1fb;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        #review {
+            margin-top: 30px;
+        }
+
+        .correct {
+            background-color: #d9f2df;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .incorrect {
+            background-color: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .correct strong {
+            color: #198754;
+        }
+
+        .incorrect strong {
+            color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Mensuration Assessment</h1>
+
+    <!-- QUESTION 1 -->
+    <div class="question">
+        <h3>Q1. What is the formula for the area of a triangle?</h3>
+
+        <label>
+            <input type="radio" name="q1" value="A">
+            A. Base + Height
+        </label>
+
+        <label>
+            <input type="radio" name="q1" value="B">
+            B. &frac12; &times; Base &times; Height
+        </label>
+
+        <label>
+            <input type="radio" name="q1" value="C">
+            C. Base &times; Height
+        </label>
+
+        <label>
+            <input type="radio" name="q1" value="D">
+            D. 2 &times; Base &times; Height
+        </label>
+    </div>
+
+
+    <!-- QUESTION 2 -->
+    <div class="question">
+        <h3>Q2. Find the area of a triangle with base 10 cm and height 6 cm.</h3>
+
+        <label>
+            <input type="radio" name="q2" value="A">
+            A. 60 cm&sup2;
+        </label>
+
+        <label>
+            <input type="radio" name="q2" value="B">
+            B. 30 cm&sup2;
+        </label>
+
+        <label>
+            <input type="radio" name="q2" value="C">
+            C. 16 cm&sup2;
+        </label>
+
+        <label>
+            <input type="radio" name="q2" value="D">
+            D. 20 cm&sup2;
+        </label>
+    </div>
+
+
+    <!-- QUESTION 3 -->
+    <div class="question">
+        <h3>Q3. What is the area of a triangle with base 12 cm and height 10 cm?</h3>
+
+        <label>
+            <input type="radio" name="q3" value="A">
+            A. 120 cm&sup2;
+        </label>
+
+        <label>
+            <input type="radio" name="q3" value="B">
+            B. 50 cm&sup2;
+        </label>
+
+        <label>
+            <input type="radio" name="q3" value="C">
+            C. 60 cm&sup2;
+        </label>
+
+        <label>
+            <input type="radio" name="q3" value="D">
+            D. 22 cm&sup2;
+        </label>
+    </div>
+
+
+    <!-- QUESTION 4 -->
+    <div class="question">
+        <h3>Q4. What is the formula for the area of a parallelogram?</h3>
+
+        <label>
+            <input type="radio" name="q4" value="A">
+            A. Base &times; Height
+        </label>
+
+        <label>
+            <input type="radio" name="q4" value="B">
+            B. &frac12; &times; Base &times; Height
+        </label>
+
+        <label>
+            <input type="radio" name="q4" value="C">
+            C. Base + Height
+        </label>
+
+        <label>
+            <input type="radio" name="q4" value="D">
+            D. 2 &times; Base
+        </label>
+    </div>
+
+
+    <!-- QUESTION 5 -->
+    <div class="question">
+        <h3>Q5. Find the area of a rectangle with length 10 cm and width 10 cm.</h3>
+
+        <label>
+            <input type="radio" name="q5" value="A">
+            A. 20 cm&sup2;
+        </label>
+
+        <label>
+            <input type="radio" name="q5" value="B">
+            B. 50 cm&sup2;
+        </label>
+
+        <label>
+            <input type="radio" name="q5" value="C">
+            C. 100 cm&sup2;
+        </label>
+
+        <label>
+            <input type="radio" name="q5" value="D">
+            D. 200 cm&sup2;
+        </label>
+    </div>
+
+
+    <button onclick="checkAnswers()">Submit Assessment</button>
+
+
+    <!-- SCORE -->
+    <div id="result"></div>
+
+
+    <!-- REVIEW -->
+    <div id="review"></div>
+
+</div>
+
+
+<script>
+
+function checkAnswers() {
+
+    let score = 0;
+
+    /* CORRECT OPTIONS */
+    let answers = {
+        q1: "B",
+        q2: "B",
+        q3: "C",
+        q4: "A",
+        q5: "C"
+    };
+
+    /* CORRECT ANSWERS TO DISPLAY */
+    let correctAnswers = {
+        q1: "B. &frac12; &times; Base &times; Height",
+        q2: "B. 30 cm&sup2;",
+        q3: "C. 60 cm&sup2;",
+        q4: "A. Base &times; Height",
+        q5: "C. 100 cm&sup2;"
+    };
+
+
+    /* CALCULATE SCORE */
+
+    for (let question in answers) {
+
+        let selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+
+    /* CALCULATE PERCENTAGE */
+
+    let percentage = (score / 5) * 100;
+
+
+    /* DISPLAY SCORE */
+
+    document.getElementById("result").innerHTML =
+        "<h2>Your score: " + score + " out of 5</h2>" +
+        "<h3>Percentage: " + percentage + "%</h3>";
+
+
+    /* REVIEW ANSWERS */
+
+    let reviewHTML = "<h2>Review Your Answers</h2>";
+
+
+    for (let question in answers) {
+
+        let selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        let userAnswer = selected ? selected.value : "No answer";
+
+
+        /* CORRECT ANSWER */
+
+        if (userAnswer === answers[question]) {
+
+            reviewHTML += `
+                <div class="correct">
+
+                    <strong>
+                        ${question.toUpperCase()} ? Correct
+                    </strong>
+
+                    <br>
+
+                    Your answer: ${userAnswer}
+
+                    <br>
+
+                    Correct answer: ${correctAnswers[question]}
+
+                </div>
+            `;
+
+        }
+
+
+        /* INCORRECT ANSWER */
+
+        else {
+
+            reviewHTML += `
+                <div class="incorrect">
+
+                    <strong>
+                        ${question.toUpperCase()} ? Incorrect
+                    </strong>
+
+                    <br>
+
+                    Your answer: ${userAnswer}
+
+                    <br>
+
+                    Correct answer: ${correctAnswers[question]}
+
+                </div>
+            `;
+        }
+    }
+
+
+    /* DISPLAY REVIEW */
+
+    document.getElementById("review").innerHTML = reviewHTML;
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+                    
